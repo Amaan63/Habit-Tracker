@@ -5,28 +5,28 @@ import CalendarGrid from "./calendar-component/CalendarGrid";
 import SelectedDateInfo from "./calendar-component/SelectedDateInfo";
 
 // Optional fallback habits for testing
-const fallbackHabits = [
-  {
-    name: "Drink Water",
-    emoji: "🚰",
-    startDate: "2025-07-04",
-    duration: 3,
-    color: "#1db954",
-  },
-  {
-    name: "Meditate",
-    emoji: "🧘",
-    startDate: "2025-07-03",
-    duration: 2,
-    color: "#f43f5e",
-  },
-];
+// const fallbackHabits = [
+//   {
+//     name: "Drink Water",
+//     emoji: "🚰",
+//     startDate: "2025-07-04",
+//     duration: 3,
+//     color: "#1db954",
+//   },
+//   {
+//     name: "Meditate",
+//     emoji: "🧘",
+//     startDate: "2025-07-03",
+//     duration: 2,
+//     color: "#f43f5e",
+//   },
+// ];
 
 const Calendar = ({ habits }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
-  const habitList = habits && habits.length > 0 ? habits : fallbackHabits;
+  const habitList = habits && habits.length > 0 ? habits;
 
   // Helper function to get a date string in YYYY-MM-DD format
   // This handles timezone issues by ensuring we're always working with the intended date

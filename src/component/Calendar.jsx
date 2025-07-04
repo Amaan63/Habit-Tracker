@@ -26,7 +26,7 @@ const Calendar = ({ habits }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
-  const habitList = habits && habits.length > 0 ? habits;
+  const habitList = habits && habits.length > 0 ? habits : [];
 
   // Helper function to get a date string in YYYY-MM-DD format
   // This handles timezone issues by ensuring we're always working with the intended date

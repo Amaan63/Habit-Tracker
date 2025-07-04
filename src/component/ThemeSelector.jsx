@@ -24,7 +24,7 @@ const themes = [
 
 const ThemeSelector = () => {
   const [activeTheme, setActiveTheme] = useState(
-    () => localStorage.getItem("theme") || "luxury"
+    () => localStorage.getItem("theme") || "dracula"
   );
 
   const applyTheme = (theme) => {
